@@ -19,6 +19,9 @@
 		D635508129110BE400C1A2FB /* GithubDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635508029110BE400C1A2FB /* GithubDemoTests.swift */; };
 		D635508B29110BE400C1A2FB /* GithubDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635508A29110BE400C1A2FB /* GithubDemoUITests.swift */; };
 		D635508D29110BE400C1A2FB /* GithubDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635508C29110BE400C1A2FB /* GithubDemoUITestsLaunchTests.swift */; };
+		D635509B29110EDC00C1A2FB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635509A29110EDB00C1A2FB /* NetworkManager.swift */; };
+		D635509D29110F3000C1A2FB /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635509C29110F3000C1A2FB /* URLS.swift */; };
+		D635509F2911124D00C1A2FB /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635509E2911124D00C1A2FB /* APIRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		D635508629110BE400C1A2FB /* GithubDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D635508A29110BE400C1A2FB /* GithubDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubDemoUITests.swift; sourceTree = "<group>"; };
 		D635508C29110BE400C1A2FB /* GithubDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D635509A29110EDB00C1A2FB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D635509C29110F3000C1A2FB /* URLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
+		D635509E2911124D00C1A2FB /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		DB83CCE7F63505F38902BA99 /* Pods-GithubDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubDemoTests/Pods-GithubDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +107,6 @@
 				DB83CCE7F63505F38902BA99 /* Pods-GithubDemoTests.debug.xcconfig */,
 				C0A9C973758585456CE5CC37 /* Pods-GithubDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,6 +148,7 @@
 				D635506929110BE300C1A2FB /* AppDelegate.swift */,
 				D635506B29110BE300C1A2FB /* SceneDelegate.swift */,
 				D635506D29110BE300C1A2FB /* ViewController.swift */,
+				D635509929110EC900C1A2FB /* Network Layer */,
 				D635506F29110BE300C1A2FB /* Main.storyboard */,
 				D635507229110BE400C1A2FB /* Assets.xcassets */,
 				D635507429110BE400C1A2FB /* LaunchScreen.storyboard */,
@@ -166,6 +172,16 @@
 				D635508C29110BE400C1A2FB /* GithubDemoUITestsLaunchTests.swift */,
 			);
 			path = GithubDemoUITests;
+			sourceTree = "<group>";
+		};
+		D635509929110EC900C1A2FB /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D635509A29110EDB00C1A2FB /* NetworkManager.swift */,
+				D635509C29110F3000C1A2FB /* URLS.swift */,
+				D635509E2911124D00C1A2FB /* APIRouter.swift */,
+			);
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +423,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D635509D29110F3000C1A2FB /* URLS.swift in Sources */,
+				D635509F2911124D00C1A2FB /* APIRouter.swift in Sources */,
 				D635506E29110BE300C1A2FB /* ViewController.swift in Sources */,
+				D635509B29110EDC00C1A2FB /* NetworkManager.swift in Sources */,
 				D635506A29110BE300C1A2FB /* AppDelegate.swift in Sources */,
 				D635506C29110BE300C1A2FB /* SceneDelegate.swift in Sources */,
 			);
