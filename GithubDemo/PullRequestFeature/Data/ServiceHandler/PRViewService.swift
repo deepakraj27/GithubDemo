@@ -8,12 +8,12 @@
 import Foundation
 
 protocol PRViewServiceDelegate {
-    func getClosedPRs(completion: @escaping(Result<[PullRequest], NetworkError>) -> Void)
+    func getClosedPRs(queryParams: FetchPullRequestInit, completion: @escaping(Result<[PullRequest], NetworkError>) -> Void)
 }
 
 class PRViewService: PRViewServiceDelegate {
-    func getClosedPRs(completion: @escaping (Result<[PullRequest], NetworkError>) -> Void) {
-        guard let queryParams = FetchPullRequestInit(page: "1").dictionary else {return}
-        NetworkManager.sharedInstance.requestData(url: APIRouter.getClosedPRs(queryParams: queryParams), completion: completion)
+    func getClosedPRs(queryParams: FetchPullRequestInit, completion: @escaping (Result<[PullRequest], NetworkError>) -> Void) {
+        guard let query = queryParams.dictionary else {return}
+        NetworkManager.sharedInstance.requestData(url: APIRouter.getClosedPRs(queryParams: query), completion: completion)
     }
 }

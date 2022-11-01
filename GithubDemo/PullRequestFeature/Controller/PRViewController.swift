@@ -39,6 +39,7 @@ class PRViewController: UIViewController {
             guard let self = self else { return }
 
             self.view.hideLoader()
+
             if let uiModels = uiModels, uiModels.count > 0 {
                 self.uiModels = uiModels
             }else {
@@ -56,6 +57,10 @@ class PRViewController: UIViewController {
     private func viewSetter(_ isError: Bool = false) {
         self.errorStateView.isHidden = !isError
         self.prListView.isHidden = isError
+    }
+
+    @objc private func refreshDatasource(_ sender: Any) {
+        fetchPRs()
     }
 
     //MARK:- TableView Setting
@@ -83,6 +88,15 @@ extension PRViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let uiModels = self.uiModels, indexPath.row == uiModels.count - 1 {
+            prViewControllerViewModel.didLoadNextPage {[weak self] uiModels, error in
+                guard let self = self else { return }
+                self.uiModels = uiModels
+            }
+        }
     }
 }
 

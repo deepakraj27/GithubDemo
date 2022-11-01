@@ -182,7 +182,6 @@
 				D63550BD2911387A00C1A2FB /* Utils */,
 				D635506929110BE300C1A2FB /* AppDelegate.swift */,
 				D635506B29110BE300C1A2FB /* SceneDelegate.swift */,
-				D635506D29110BE300C1A2FB /* PRViewController.swift */,
 				D63550A02911178400C1A2FB /* PullRequestFeature */,
 				D635509929110EC900C1A2FB /* Network Layer */,
 				D635506F29110BE300C1A2FB /* Main.storyboard */,
@@ -225,6 +224,7 @@
 		D63550A02911178400C1A2FB /* PullRequestFeature */ = {
 			isa = PBXGroup;
 			children = (
+				D6D910E529115DC900B1C608 /* Controller */,
 				D63550C229113A7000C1A2FB /* UI Model */,
 				D63550B82911381100C1A2FB /* View */,
 				D63550AD29111FB300C1A2FB /* ViewModel */,
@@ -329,6 +329,14 @@
 				D63550B62911298500C1A2FB /* TestHelper.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		D6D910E529115DC900B1C608 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D635506D29110BE300C1A2FB /* PRViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
