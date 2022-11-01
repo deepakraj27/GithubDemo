@@ -6,7 +6,8 @@ target 'GithubDemo' do
   use_frameworks!
 
   # Pods for GithubDemo
-pod 'Alamofire'
+  pod 'Alamofire'
+  pod 'SDWebImage'
 
   target 'GithubDemoTests' do
     inherit! :search_paths

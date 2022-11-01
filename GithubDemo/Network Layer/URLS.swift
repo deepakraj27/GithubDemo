@@ -15,6 +15,6 @@ struct URLS{
     static var BASE_URL = Domains.PROD
 
     struct GitHubFeatures {
-        static let getClosedPRs = "pulls?page=1&per_page=10"
+        static let getClosedPRs = "pulls"
     }
 }

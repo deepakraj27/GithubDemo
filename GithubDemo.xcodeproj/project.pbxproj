@@ -12,7 +12,7 @@
 		C96E7AAB2CFED22BEF9D1E82 /* Pods_GithubDemo_GithubDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC9F6D8AA76F90EFCEA3709 /* Pods_GithubDemo_GithubDemoUITests.framework */; };
 		D635506A29110BE300C1A2FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635506929110BE300C1A2FB /* AppDelegate.swift */; };
 		D635506C29110BE300C1A2FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635506B29110BE300C1A2FB /* SceneDelegate.swift */; };
-		D635506E29110BE300C1A2FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635506D29110BE300C1A2FB /* ViewController.swift */; };
+		D635506E29110BE300C1A2FB /* PRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635506D29110BE300C1A2FB /* PRViewController.swift */; };
 		D635507129110BE300C1A2FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D635506F29110BE300C1A2FB /* Main.storyboard */; };
 		D635507329110BE400C1A2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D635507229110BE400C1A2FB /* Assets.xcassets */; };
 		D635507629110BE400C1A2FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D635507429110BE400C1A2FB /* LaunchScreen.storyboard */; };
@@ -22,6 +22,23 @@
 		D635509B29110EDC00C1A2FB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635509A29110EDB00C1A2FB /* NetworkManager.swift */; };
 		D635509D29110F3000C1A2FB /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635509C29110F3000C1A2FB /* URLS.swift */; };
 		D635509F2911124D00C1A2FB /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635509E2911124D00C1A2FB /* APIRouter.swift */; };
+		D63550A3291117A900C1A2FB /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550A2291117A900C1A2FB /* PullRequest.swift */; };
+		D63550A52911185600C1A2FB /* PRUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550A42911185600C1A2FB /* PRUser.swift */; };
+		D63550A829111B3700C1A2FB /* FetchPullRequestInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550A729111B3700C1A2FB /* FetchPullRequestInit.swift */; };
+		D63550AC29111CE900C1A2FB /* PRViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550AB29111CE900C1A2FB /* PRViewService.swift */; };
+		D63550AF29111FC600C1A2FB /* PRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550AE29111FC600C1A2FB /* PRViewModel.swift */; };
+		D63550B1291121A700C1A2FB /* pullrequest.json in Resources */ = {isa = PBXBuildFile; fileRef = D63550B0291121A700C1A2FB /* pullrequest.json */; };
+		D63550B3291121C500C1A2FB /* MockPRViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550B2291121C500C1A2FB /* MockPRViewService.swift */; };
+		D63550B52911239000C1A2FB /* PRViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550B42911239000C1A2FB /* PRViewModelTests.swift */; };
+		D63550B72911298500C1A2FB /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550B62911298500C1A2FB /* TestHelper.swift */; };
+		D63550BB2911384E00C1A2FB /* PRCellViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550B92911384E00C1A2FB /* PRCellViewLayout.swift */; };
+		D63550BC2911384E00C1A2FB /* PRCellViewLayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = D63550BA2911384E00C1A2FB /* PRCellViewLayout.xib */; };
+		D63550BF2911388B00C1A2FB /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550BE2911388B00C1A2FB /* ClassNameProtocol.swift */; };
+		D63550C12911397200C1A2FB /* UIView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550C02911397200C1A2FB /* UIView+Loader.swift */; };
+		D63550C429113A8800C1A2FB /* PRUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550C329113A8800C1A2FB /* PRUIViewModel.swift */; };
+		D63550C629113B5000C1A2FB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550C529113B5000C1A2FB /* Helper.swift */; };
+		D6D910DF2911571200B1C608 /* PullRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D910DE2911571200B1C608 /* PullRequestsTests.swift */; };
+		D6D910E12911581700B1C608 /* PRUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D910E02911581700B1C608 /* PRUserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +70,7 @@
 		D635506629110BE300C1A2FB /* GithubDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D635506929110BE300C1A2FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D635506B29110BE300C1A2FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D635506D29110BE300C1A2FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D635506D29110BE300C1A2FB /* PRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRViewController.swift; sourceTree = "<group>"; };
 		D635507029110BE300C1A2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D635507229110BE400C1A2FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D635507529110BE400C1A2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +83,23 @@
 		D635509A29110EDB00C1A2FB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D635509C29110F3000C1A2FB /* URLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
 		D635509E2911124D00C1A2FB /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		D63550A2291117A900C1A2FB /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		D63550A42911185600C1A2FB /* PRUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRUser.swift; sourceTree = "<group>"; };
+		D63550A729111B3700C1A2FB /* FetchPullRequestInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPullRequestInit.swift; sourceTree = "<group>"; };
+		D63550AB29111CE900C1A2FB /* PRViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRViewService.swift; sourceTree = "<group>"; };
+		D63550AE29111FC600C1A2FB /* PRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRViewModel.swift; sourceTree = "<group>"; };
+		D63550B0291121A700C1A2FB /* pullrequest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pullrequest.json; sourceTree = "<group>"; };
+		D63550B2291121C500C1A2FB /* MockPRViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPRViewService.swift; sourceTree = "<group>"; };
+		D63550B42911239000C1A2FB /* PRViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRViewModelTests.swift; sourceTree = "<group>"; };
+		D63550B62911298500C1A2FB /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		D63550B92911384E00C1A2FB /* PRCellViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRCellViewLayout.swift; sourceTree = "<group>"; };
+		D63550BA2911384E00C1A2FB /* PRCellViewLayout.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PRCellViewLayout.xib; sourceTree = "<group>"; };
+		D63550BE2911388B00C1A2FB /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
+		D63550C02911397200C1A2FB /* UIView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loader.swift"; sourceTree = "<group>"; };
+		D63550C329113A8800C1A2FB /* PRUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRUIViewModel.swift; sourceTree = "<group>"; };
+		D63550C529113B5000C1A2FB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		D6D910DE2911571200B1C608 /* PullRequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsTests.swift; sourceTree = "<group>"; };
+		D6D910E02911581700B1C608 /* PRUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRUserTests.swift; sourceTree = "<group>"; };
 		DB83CCE7F63505F38902BA99 /* Pods-GithubDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubDemoTests/Pods-GithubDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,9 +179,11 @@
 		D635506829110BE300C1A2FB /* GithubDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D63550BD2911387A00C1A2FB /* Utils */,
 				D635506929110BE300C1A2FB /* AppDelegate.swift */,
 				D635506B29110BE300C1A2FB /* SceneDelegate.swift */,
-				D635506D29110BE300C1A2FB /* ViewController.swift */,
+				D635506D29110BE300C1A2FB /* PRViewController.swift */,
+				D63550A02911178400C1A2FB /* PullRequestFeature */,
 				D635509929110EC900C1A2FB /* Network Layer */,
 				D635506F29110BE300C1A2FB /* Main.storyboard */,
 				D635507229110BE400C1A2FB /* Assets.xcassets */,
@@ -160,7 +196,9 @@
 		D635507F29110BE400C1A2FB /* GithubDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				D635508029110BE400C1A2FB /* GithubDemoTests.swift */,
+				D6D910E4291158C900B1C608 /* Commons */,
+				D6D910E3291158B100B1C608 /* ViewModel */,
+				D6D910E22911589D00B1C608 /* Models */,
 			);
 			path = GithubDemoTests;
 			sourceTree = "<group>";
@@ -182,6 +220,115 @@
 				D635509E2911124D00C1A2FB /* APIRouter.swift */,
 			);
 			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		D63550A02911178400C1A2FB /* PullRequestFeature */ = {
+			isa = PBXGroup;
+			children = (
+				D63550C229113A7000C1A2FB /* UI Model */,
+				D63550B82911381100C1A2FB /* View */,
+				D63550AD29111FB300C1A2FB /* ViewModel */,
+				D63550A629111B2000C1A2FB /* Data */,
+			);
+			path = PullRequestFeature;
+			sourceTree = "<group>";
+		};
+		D63550A12911179800C1A2FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D63550A2291117A900C1A2FB /* PullRequest.swift */,
+				D63550A42911185600C1A2FB /* PRUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D63550A629111B2000C1A2FB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D63550AA29111C1100C1A2FB /* ServiceHandler */,
+				D63550A929111BBB00C1A2FB /* Init */,
+				D63550A12911179800C1A2FB /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D63550A929111BBB00C1A2FB /* Init */ = {
+			isa = PBXGroup;
+			children = (
+				D63550A729111B3700C1A2FB /* FetchPullRequestInit.swift */,
+			);
+			path = Init;
+			sourceTree = "<group>";
+		};
+		D63550AA29111C1100C1A2FB /* ServiceHandler */ = {
+			isa = PBXGroup;
+			children = (
+				D63550AB29111CE900C1A2FB /* PRViewService.swift */,
+			);
+			path = ServiceHandler;
+			sourceTree = "<group>";
+		};
+		D63550AD29111FB300C1A2FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D63550AE29111FC600C1A2FB /* PRViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D63550B82911381100C1A2FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D63550B92911384E00C1A2FB /* PRCellViewLayout.swift */,
+				D63550BA2911384E00C1A2FB /* PRCellViewLayout.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D63550BD2911387A00C1A2FB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D63550BE2911388B00C1A2FB /* ClassNameProtocol.swift */,
+				D63550C02911397200C1A2FB /* UIView+Loader.swift */,
+				D63550C529113B5000C1A2FB /* Helper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D63550C229113A7000C1A2FB /* UI Model */ = {
+			isa = PBXGroup;
+			children = (
+				D63550C329113A8800C1A2FB /* PRUIViewModel.swift */,
+			);
+			path = "UI Model";
+			sourceTree = "<group>";
+		};
+		D6D910E22911589D00B1C608 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6D910DE2911571200B1C608 /* PullRequestsTests.swift */,
+				D6D910E02911581700B1C608 /* PRUserTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6D910E3291158B100B1C608 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D63550B2291121C500C1A2FB /* MockPRViewService.swift */,
+				D63550B42911239000C1A2FB /* PRViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D6D910E4291158C900B1C608 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				D635508029110BE400C1A2FB /* GithubDemoTests.swift */,
+				D63550B0291121A700C1A2FB /* pullrequest.json */,
+				D63550B62911298500C1A2FB /* TestHelper.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63550BC2911384E00C1A2FB /* PRCellViewLayout.xib in Resources */,
 				D635507629110BE400C1A2FB /* LaunchScreen.storyboard in Resources */,
 				D635507329110BE400C1A2FB /* Assets.xcassets in Resources */,
 				D635507129110BE300C1A2FB /* Main.storyboard in Resources */,
@@ -303,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63550B1291121A700C1A2FB /* pullrequest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,9 +573,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D635509D29110F3000C1A2FB /* URLS.swift in Sources */,
+				D63550C12911397200C1A2FB /* UIView+Loader.swift in Sources */,
 				D635509F2911124D00C1A2FB /* APIRouter.swift in Sources */,
-				D635506E29110BE300C1A2FB /* ViewController.swift in Sources */,
+				D635506E29110BE300C1A2FB /* PRViewController.swift in Sources */,
+				D63550AC29111CE900C1A2FB /* PRViewService.swift in Sources */,
+				D63550BB2911384E00C1A2FB /* PRCellViewLayout.swift in Sources */,
+				D63550A829111B3700C1A2FB /* FetchPullRequestInit.swift in Sources */,
+				D63550C629113B5000C1A2FB /* Helper.swift in Sources */,
+				D63550C429113A8800C1A2FB /* PRUIViewModel.swift in Sources */,
+				D63550A3291117A900C1A2FB /* PullRequest.swift in Sources */,
+				D63550AF29111FC600C1A2FB /* PRViewModel.swift in Sources */,
+				D63550A52911185600C1A2FB /* PRUser.swift in Sources */,
 				D635509B29110EDC00C1A2FB /* NetworkManager.swift in Sources */,
+				D63550BF2911388B00C1A2FB /* ClassNameProtocol.swift in Sources */,
 				D635506A29110BE300C1A2FB /* AppDelegate.swift in Sources */,
 				D635506C29110BE300C1A2FB /* SceneDelegate.swift in Sources */,
 			);
@@ -436,7 +595,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D910E12911581700B1C608 /* PRUserTests.swift in Sources */,
+				D63550B72911298500C1A2FB /* TestHelper.swift in Sources */,
+				D63550B3291121C500C1A2FB /* MockPRViewService.swift in Sources */,
+				D6D910DF2911571200B1C608 /* PullRequestsTests.swift in Sources */,
 				D635508129110BE400C1A2FB /* GithubDemoTests.swift in Sources */,
+				D63550B52911239000C1A2FB /* PRViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
