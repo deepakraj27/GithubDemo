@@ -35,7 +35,7 @@ enum APIRouter: URLRequestConvertible {
 
         switch self {
         case .getClosedPRs(let queryParams):
-            urlRequest.addValue(URLS.BEARER_AUTH, forHTTPHeaderField: "Authorization")
+//            urlRequest.addValue("", forHTTPHeaderField: "Authorization")
             urlRequest = try URLEncoding.queryString.encode(urlRequest, with: queryParams)
         default:
             break

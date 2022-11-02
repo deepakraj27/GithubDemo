@@ -32,7 +32,7 @@ class PRViewModel {
 
         if !isLoading {
             self.isLoading = true
-            
+
             var thisBatchItems: [PullRequest]? = nil
             let queryParams = FetchPullRequestInit(page: "\(page)", perPage: "\(itemsPerBatch)")
 
@@ -65,8 +65,16 @@ class PRViewModel {
                     }
                 case .failure(let error):
                     self.isLoading = false
-
-                    completion(nil, .APIError(error.localizedDescription))
+                    //corner case to handle the failure if the data already present send it
+                    if self.pullRequestList.count > 0 {
+                        var resultsVMs = [PRUIViewModel]()
+                        self.pullRequestList.forEach { eachPR in
+                            resultsVMs.append(PRUIViewModel(eachPR))
+                        }
+                        completion(resultsVMs, nil)
+                    } else {
+                        completion(nil, .APIError(error.localizedDescription))
+                    }
                 }
             }
         }
