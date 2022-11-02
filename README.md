@@ -1,7 +1,12 @@
 # GithubDemo
 
 ## Summary
-This app demonstrates the Fetching the list of closed pull request from GitHub with simple API call with Authorization. We have used authorization provided by github inorder to overcome the "Rate limiting".
+This app demonstrates the Fetching the list of closed pull request from GitHub with simple API call without Authorization. We need to use authorization provided by github inorder to overcome the "Rate limiting". 
+
+Todo that pls navigate to APIRouter and go to asURLRequest and add your github private user token to fetch the list
+```
+urlRequest.addValue("", forHTTPHeaderField: "Authorization")
+```
 
 ## Third Party Framewroks
 I have used ALAMOFIRE to handle API Calls and Mapped JSON's to my CODABLE MODEL. All the codable models are tested with UNIT test with mock data.
