@@ -35,7 +35,7 @@ enum APIRouter: URLRequestConvertible {
 
         switch self {
         case .getClosedPRs(let queryParams):
-            urlRequest.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+            urlRequest.addValue(URLS.BEARER_AUTH, forHTTPHeaderField: "Authorization")
             urlRequest = try URLEncoding.queryString.encode(urlRequest, with: queryParams)
         default:
             break

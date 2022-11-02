@@ -39,6 +39,8 @@
 		D63550C629113B5000C1A2FB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63550C529113B5000C1A2FB /* Helper.swift */; };
 		D6D910DF2911571200B1C608 /* PullRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D910DE2911571200B1C608 /* PullRequestsTests.swift */; };
 		D6D910E12911581700B1C608 /* PRUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D910E02911581700B1C608 /* PRUserTests.swift */; };
+		D6D910E82912355B00B1C608 /* PRLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D910E62912355B00B1C608 /* PRLoadingCell.swift */; };
+		D6D910E92912355B00B1C608 /* PRLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D910E72912355B00B1C608 /* PRLoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		D63550C529113B5000C1A2FB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D6D910DE2911571200B1C608 /* PullRequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsTests.swift; sourceTree = "<group>"; };
 		D6D910E02911581700B1C608 /* PRUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRUserTests.swift; sourceTree = "<group>"; };
+		D6D910E62912355B00B1C608 /* PRLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRLoadingCell.swift; sourceTree = "<group>"; };
+		D6D910E72912355B00B1C608 /* PRLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PRLoadingCell.xib; sourceTree = "<group>"; };
 		DB83CCE7F63505F38902BA99 /* Pods-GithubDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubDemoTests/Pods-GithubDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,6 +285,8 @@
 			children = (
 				D63550B92911384E00C1A2FB /* PRCellViewLayout.swift */,
 				D63550BA2911384E00C1A2FB /* PRCellViewLayout.xib */,
+				D6D910E62912355B00B1C608 /* PRLoadingCell.swift */,
+				D6D910E72912355B00B1C608 /* PRLoadingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D910E92912355B00B1C608 /* PRLoadingCell.xib in Resources */,
 				D63550BC2911384E00C1A2FB /* PRCellViewLayout.xib in Resources */,
 				D635507629110BE400C1A2FB /* LaunchScreen.storyboard in Resources */,
 				D635507329110BE400C1A2FB /* Assets.xcassets in Resources */,
@@ -591,6 +598,7 @@
 				D63550C429113A8800C1A2FB /* PRUIViewModel.swift in Sources */,
 				D63550A3291117A900C1A2FB /* PullRequest.swift in Sources */,
 				D63550AF29111FC600C1A2FB /* PRViewModel.swift in Sources */,
+				D6D910E82912355B00B1C608 /* PRLoadingCell.swift in Sources */,
 				D63550A52911185600C1A2FB /* PRUser.swift in Sources */,
 				D635509B29110EDC00C1A2FB /* NetworkManager.swift in Sources */,
 				D63550BF2911388B00C1A2FB /* ClassNameProtocol.swift in Sources */,

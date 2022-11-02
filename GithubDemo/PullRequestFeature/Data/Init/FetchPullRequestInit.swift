@@ -20,7 +20,7 @@ struct FetchPullRequestInit: Codable{
     init(page: String?, perPage: String?) {
         self.page = page
         self.perPage = perPage
-        self.state = "open"
+        self.state = "closed"
     }
 }
 

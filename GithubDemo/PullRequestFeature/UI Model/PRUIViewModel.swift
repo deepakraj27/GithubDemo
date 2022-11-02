@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension PRUIViewModel{
-    fileprivate struct PRUIViewModelConstants{
+    private struct PRUIViewModelConstants{
         static let titleFont: UIFont = UIFont.setupFont(16.0)
         static let subtitleFont: UIFont = UIFont.setupFont(14.0, true)
 

@@ -23,40 +23,51 @@ class PRViewModel {
     }
 
     var pullRequestList: [PullRequest] = [PullRequest]()
+    var isLoading: Bool = false
 
     func fetchPRs(completion: @escaping(_ uiModels: [PRUIViewModel]?, _ error: NetworkError?) -> Void) {
         guard !self.reachedEndOfItems else {
             return
         }
 
-        var thisBatchItems: [PullRequest]? = nil
-        let queryParams = FetchPullRequestInit(page: "\(page)", perPage: "\(itemsPerBatch)")
+        if !isLoading {
+            self.isLoading = true
+            
+            var thisBatchItems: [PullRequest]? = nil
+            let queryParams = FetchPullRequestInit(page: "\(page)", perPage: "\(itemsPerBatch)")
 
-        prViewService.getClosedPRs(queryParams: queryParams) { result in
-            switch result {
-            case .success(let pullRequests):
-                thisBatchItems = pullRequests
-                if let newItems = thisBatchItems {
-                    self.pullRequestList.append(contentsOf: newItems)
-                    // check if this was the last of the data
-                    if newItems.count < self.itemsPerBatch {
-                        self.reachedEndOfItems = true
-                        print("reached end of data. Batch count: \(newItems.count)")
-                    }
-                    self.page += 1
+            prViewService.getClosedPRs(queryParams: queryParams) {[weak self] result in
+                guard let self = self else { return }
 
-                    if self.pullRequestList.count > 0 {
-                        var resultsVMs = [PRUIViewModel]()
-                        self.pullRequestList.forEach { eachPR in
-                            resultsVMs.append(PRUIViewModel(eachPR))
+                switch result {
+                case .success(let pullRequests):
+                    self.isLoading = false
+
+                    thisBatchItems = pullRequests
+                    if let newItems = thisBatchItems {
+                        self.pullRequestList.append(contentsOf: newItems)
+                        // check if this was the last of the data
+                        if newItems.count < self.itemsPerBatch {
+                            self.reachedEndOfItems = true
+                            print("reached end of data. Batch count: \(newItems.count)")
                         }
-                        completion(resultsVMs, nil)
-                    } else {
-                        completion(nil, .NoData)
+                        self.page += 1
+
+                        if self.pullRequestList.count > 0 {
+                            var resultsVMs = [PRUIViewModel]()
+                            self.pullRequestList.forEach { eachPR in
+                                resultsVMs.append(PRUIViewModel(eachPR))
+                            }
+                            completion(resultsVMs, nil)
+                        } else {
+                            completion(nil, .NoData)
+                        }
                     }
+                case .failure(let error):
+                    self.isLoading = false
+
+                    completion(nil, .APIError(error.localizedDescription))
                 }
-            case .failure(let error):
-                completion(nil, .APIError(error.localizedDescription))
             }
         }
     }
